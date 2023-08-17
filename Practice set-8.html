@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    'use strict';
+
+    // const jonas = {
+    //     name: "Jonas",
+    //     "friends": ["shyam", 'manish', 'rohan'],
+    //     license: false,
+    //     canDrive: function () {
+    //         return (this.license ? "a" : "not")
+    //     }
+
+    // }
+
+    // console.log(`jons have ${jonas.friends.length} freinds and jonas best friend is ${jonas["friends"][2]}`)
+    // console.log(`${jonas["name"]} is ${jonas.age = 46} yrs old , and he has ${jonas.canDrive()} driving license`)
+
+    // console.log(jonas.canDrive())
+
+
+    // let's go back to marks  and john comparing their BMIs! this time , let's use objects to implement the calculations ! Remember : BMI = mass / (height * height ). (mass in kg and height in meter)
+
+    // 1. for each of time, create an object with properties for their full name, mass, and height (mark miller and john smith)
+
+    //2. ceate a 'calclBMI' method on each object to calculate the BMI (the same method on objects ). store the Bmi value to a property, and also return it form the method.
+
+    //3. log to the console who has the higher the BMI, together with the full name and the respective BMI, Example : "john 's BMI (28.3) is higher than Mark's(23.9)!"
+
+    // Test data : marks weights 78 kg and is 1.69m tall. john weights 92kg and is 1.95 m tall. 
+
+
+    const john = {
+        name: "John smith",
+        height: 1.95,
+        weight: 92,
+        calcBMI: function () {
+            let BMI;
+            return BMI = this.weight / (this.height ** 2)
+        }
+
+    }
+
+    const mark = {
+
+        name: "Mark Miller",
+        height: 1.69,
+        weight: 78,
+        calcBMI: function () {
+            let BMI;
+            return BMI = this.weight / (this.height ** 2)
+        }
+    }
+
+    console.log(`Mark BMI ${mark.calcBMI() > john.calcBMI() ? `is higer than ` : "lower than "} ${john.name} `)
+</script>
+
+</html>

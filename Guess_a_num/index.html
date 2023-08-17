@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess a Number</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="mediaquery.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header-section -->
+    <header>
+        <div>
+            <p>&lt;Between 1 to 20&gt;</p>
+            <button id="again">Again</button>
+        </div>
+
+        <h1>Guess My Number !</h1>
+    </header>
+
+    <section>
+        <!-- output used for random number  -->
+        <div class="output">
+            <p id="randValue">?</p>
+        </div>
+        <!-- main-section -->
+
+        <main class="flex">
+            <!-- Check-box -->
+            <div class="check-box">
+                <div>
+                    <input type="number" name="" id="user-input">
+                    <div><button id="check-btn">Check!</button></div>
+
+                </div>
+            </div>
+
+            <!-- Score-box -->
+            <div class="score-box">
+                <div>
+                    <h2>
+                        <p id="msg">Start Guessing...</p>
+                    </h2>
+                    <div>
+                        <span> 💯 Score :</span>
+                        <span id="score">20</span>
+                    </div>
+
+                    <br />
+
+                    <div>
+                        <span> 🎖️ Highscore :</span>
+                        <span id="high-score">0</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+
+
+    <script src="index.js">
+    </script>
+
+
+</html>

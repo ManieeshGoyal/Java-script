@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock paper scissor</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    "use strict";
+
+    alert("Rock 🪨 Paper 📃 Scissors ✂️")
+
+    const keys = ["rock", "paper", "scissor"]
+    let comPoints = 0
+    let userPoints = 0
+    // check() = this fucntion takes two values and make logic for running the game 
+    //*** starting of check()***
+
+    const check = (userValue, keyValue) => {
+
+        if (userValue === keyValue) {
+            alert(`Round Draw 📍`)
+        }
+
+        else if (userValue === "rock" && keyValue === "paper" || userValue === "scissor" && keyValue === "rock" || userValue === "paper" && keyValue === "scissor") {
+            comPoints = comPoints + 1
+        }
+        else {
+            userPoints = userPoints + 1
+        }
+
+    }
+
+    //*** Ending of check()
+
+
+
+
+    // genrateValues = this function gerates valid value for (check) function 
+    //*** starting of genrateValue() ***
+
+    const genrateValues = (rounds) => {
+        "use strict";
+
+        let userValue;
+
+        for (let i = 0; i < rounds; i++) {
+
+            const random = Math.floor(Math.random() * 3)
+            const keyValue = keys[random]
+
+            while (true) {
+
+                userValue = prompt("Choose : Rock 🪨 Paper 📃 Scissors ✂️").toLowerCase()
+
+                if (userValue.startsWith("r")) {
+                    userValue = "rock"
+                    break;
+                }
+
+                else if (userValue.startsWith("s")) {
+                    userValue = "scissor"
+                    break;
+                }
+
+                else if (userValue.startsWith("p")) {
+                    userValue = "paper"
+                    break;
+                }
+                else {
+                    alert("You Enter wrong value Plz Enter again ")
+                }
+            }
+
+            check(userValue, keyValue)
+
+        }
+
+        alert(`User got ${userPoints} & com got ${comPoints}
+         ${(userPoints === comPoints) ? "Match draw 📍 "
+                : (userPoints > comPoints) ? "User wins 🥳 "
+                    : "com wins 🖲️"} The match`)
+    }
+    // *** Ending of genrateValues()***
+
+
+    console.log(genrateValues(6))
+
+</script>
+
+</html>

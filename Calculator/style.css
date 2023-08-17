@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto:wght@300;400;500&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    background-color: hsla(208, 7%, 55%, 1);
+    background: linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#858E96", endColorstr="#60696B", GradientType=1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+p {
+
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+}
+
+div {
+    margin-top: 15px;
+}
+
+.container {
+    width: 380px;
+    height: 680px;
+    padding: 20px;
+    background-color: black;
+    border-radius: 50px;
+    box-shadow: 0px 12px 30px black;
+}
+
+#input-box {
+    padding: 110px 20px 0px 20px;
+    width: 100%;
+    border: none;
+    font-size: 4rem;
+    text-align: right;
+    background-color: black;
+    color: white;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#input-box:focus {
+    border: none;
+    outline: none;
+}
+
+/* --- BUTTON - FORMATING --- */
+
+button {
+    font-size: 2.5rem;
+    padding: 10px 25px;
+    border-radius: 50%;
+    background-color: rgba(72, 68, 68, 0.578);
+    border: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+
+}
+
+button:active {
+    background-color: rgba(38, 36, 36, 0.578);
+
+}
+
+.reset {
+    padding: 12px 60px;
+    font-size: 2rem;
+    border-radius: 40px;
+    color: black;
+}
+
+
+.result {
+    padding: 8px 66px;
+    border-radius: 40px;
+}
+
+.multiply {
+    font-size: 2.5rem;
+    padding: 10px 25px;
+}
+
+.modular {
+    padding: 14px 23px;
+    font-size: 2rem;
+    color: black;
+}
+
+.dot {
+    padding: 10px 30px;
+}
+
+.secondary-btn {
+    background-color: rgb(187, 186, 186);
+}
+
+.secondary-btn:active {
+    background-color: rgb(140, 139, 139);
+}
+
+.primary-btn {
+    background-color: rgb(255, 166, 2);
+    color: white !important;
+}
+
+.primary-btn:active {
+    background-color: rgb(219, 143, 2);
+}
+
+/* --- LINK-SECTION --- */
+
+section {
+    width: 380px;
+    height: 400px;
+    margin: 0vh 0vh 20vh 5%;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 70px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0px 5px 40px black;
+    background-color: rgba(245, 245, 245, 0.826);
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 2rem;
+    flex-direction: column;
+
+}
+
+.fa-brands,
+.fa-solid {
+    color: black;
+    font-size: 3rem;
+    margin-left: 10px;
+}
+
+/* ---MEDA - QUERY--- */
+@media only screen and (max-width: 1180px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        gap: 40px;
+    }
+
+    section {
+        width: 380px;
+        height: 300px;
+        margin-left: 0px;
+    }
+
+    .container {
+        margin-top: 100px;
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice set-6</title>
+  </head>
+
+  <body></body>
+  <script>
+    // question 1. Write a Program using prompt function to take input of age as a value from the user and use alert to tell him if he can drive
+
+    const can_drive = () => {
+      while (true) {
+        let age = Number.parseInt(prompt("Enter Your age : ", 18));
+        // Question 2. In this previous question , use console.error to log the error if the entered age is negative
+        if (age < 1) {
+          console.error("Enter valid age !");
+          break;
+        } else {
+          if (age >= 18) {
+            alert(`Your age is ${age} so you can "Drive"`);
+            // question 3. write a program to change the url parivaahan (redirection ) if user age is 18+
+            let visit = confirm(
+              "Do you want to visit https://parivahan.gov.in/parivahan/"
+            );
+            if (visit) {
+              location.href = "https://parivahan.gov.in/parivahan/";
+              break;
+            }
+          } else {
+            alert(`Your age is less than 18 so you can't "Drive"`);
+          }
+
+          // question 4. In ques 1. use confirm to ask the user if he wants to see the prompt again
+          let again = confirm("Do you want to enter your age again ?");
+          if (again == false) {
+            break;
+          }
+        }
+      }
+    };
+
+    can_drive();
+
+    // questin 5. change the background of the page to yellow red or any  other color based on user input thorough prompt
+
+    let color = "pink";
+    document.body.style.background = color;
+  </script>
+</html>

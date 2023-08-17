@@ -1,0 +1,125 @@
+/* ----- PRE-SETS ----- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background-color: #262626;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.3rem;
+    margin-top: 10px;
+}
+
+button {
+
+    background-color: white;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    padding: 22px 53px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+
+}
+
+button:hover {
+    background-color: #cac8c8;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/* ----- HEADER SECTION----- */
+header {
+    height: 25vh;
+    width: 100%;
+    padding: 20px 40px 0px;
+}
+
+header div p {
+    text-align: right;
+}
+
+#again :focus {
+    outline: none;
+}
+
+/* -----OUTPUT-BOX----- */
+
+.output {
+    text-align: center;
+}
+
+.output p {
+    display: inline-block;
+    width: 170px;
+    height: 120px;
+    background-color: white;
+    color: rgb(25, 25, 25);
+    padding: 30px;
+    font-size: 3.5rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* -----MAIN-SECTION----- */
+
+main {
+    height: 60vh;
+
+}
+
+/* -----CHECK-BOX----- */
+.check-box,
+.score-box {
+    width: 50%;
+    height: 100%;
+}
+
+.check-box {
+    padding: 85px 0px 0px 300px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#user-input {
+    border: 6px solid white;
+    background-color: #262626;
+    width: 200px;
+    height: 120px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    margin-left: 18px;
+}
+
+#user-input:focus {
+    outline: none;
+}
+
+
+
+/* -----SCORE-BOX----- */
+
+.score-box {
+    padding: 110px 0px 0px 200px;
+}
+
+#msg {
+    margin-bottom: 70px;
+}

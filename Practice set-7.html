@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body></body>
+<script>
+
+    "use strict";
+    // ques. steve wants to build a very simple tip calculator for whenever he goes to eating in resturant.In his country, it's ususal to tip of 15% if the bill value is between  50 to 300 if the value is different, the tip is 20%
+
+    //     1. if else statement is not allowed use only ternary operator
+    //     2. print a string to the console containing the bill value, the tip, and the final value
+
+    //     let price = Number(prompt(`Enter Price of your Bill : `))
+    //     let tip;
+
+    //     price < 50 ?
+    //         alert(`you dont have to pay bcz price ${price} is less than 50 `)
+    //         : price > 50 && price <= 300 ? tip = price / 100 * 15
+    //             : price > 300 ? tip = price / 100 * 20
+    //                 : alert(`You Entered Wrong Input`)
+
+    //     console.log(`Price = ${price}
+    // Tip = ${tip} 
+    // Total Value = ${price + tip}`)
+
+
+    // ques 2
+    // 1. write a function 'caltip' that takes any bill value as an input and returns the correspoding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). use the function type you like the most. test the function using a bill value of 100.
+
+    // 2/ And now let's use arrays! So create an array "bills" containing the test data below.
+
+    // 3 . create an array 'tips' contaning the tip value for each bill, calculated from the function you created before.
+
+    // 4. Bonus creatre an array "total" contaning the totla values, so the bill+tip.
+
+    let tip;
+    const bill = []
+    const tips = []
+
+    const calTip = (value) => {
+        value < 50 ?
+            tip = 0
+            : value > 50 && value <= 300 ? tip = value / 100 * 15
+                : value > 300 ? tip = value / 100 * 20
+                    : alert(`You Entered Wrong Input`);
+
+
+        bill.push(value)
+
+        tips.push(tip)
+
+    }
+
+    const checkArray = (indexValue) => {
+        const userValue = indexValue - 1
+        const totalValue = bill[userValue] + tips[userValue]
+        return totalValue
+    }
+
+    calTip(500)
+    calTip(800)
+    calTip(1000)
+    calTip(50)
+    calTip(2000)
+
+    console.log(tips[10], bill)
+    console.log(checkArray(10))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
