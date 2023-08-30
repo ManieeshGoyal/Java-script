@@ -1,0 +1,89 @@
+<script>
+    "use strict";
+    const profile = {
+        name: "sharma ji",
+        enrollmentNo: 1,
+        grades: {
+            hindi: 12,
+            maths: 100,
+            english: 87,
+            science: 90,
+            history: 2,
+            result: {
+                hindi: "fail",
+                maths: "pass",
+                english: "pass",
+                science: "fail",
+                history: "fail",
+            }
+        },
+    }
+
+    // const { name: Myname, grades: { hindi: firstSub } } = profile
+
+    // console.log(firstSub)
+
+    // const { grade: { maths: secondSub } } = profile
+
+    // const { grades: { result: { hindi: firstSub } } } = profile
+
+    // console.log(firstSub)
+
+
+    //spread operator
+
+    const newObj = { ...profile }
+    newObj.name = "suman"
+    newObj.grades.result.hindi = "pass"
+
+    console.log(newObj.grades.result.hindi)
+
+    console.log(newObj, profile)
+
+    //SPREAD, because on Right side of =
+    const arr = [1, 2, ...[3, 4]];
+
+    //REST, because on left side of =
+    const [pizza, ...menu] = ["pizza", "microni", "pasta", "chowmein"]
+    console.log(pizza, menu)
+
+    // spread operator is used for exapand array items and rest operator is used for condense rest pattern basically collects that elements are unused in the destructring assignment 
+
+    const { name, ...others } = profile
+    console.log(name, others)
+
+
+    //using rest operator in functions
+
+
+
+    const sum = (...numbers) => {
+        let num = 0
+        for (let i = 0; i < numbers.length; i++) {
+            num = num + numbers[i]
+
+        }
+        return num
+    }
+
+    console.log(sum(1, 23))
+    console.log(sum(100, 1, 2, 3, 4, 5))
+
+    const x = [12, 23, 12, 44]
+    console.log(sum(...x))
+
+
+    // IGNORE THIS 
+
+    const greet = (greeting) => {
+        return (name) => {
+            console.log(`${greeting} ${name} `);
+        };
+    };
+
+    const greeterHey = greet("Hey");
+    greeterHey("Jonas");
+    greeterHey('Steven');
+
+    greet('hello')('manish');
+</script>

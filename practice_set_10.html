@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500&family=Lato:wght@300;400&display=swap');
+
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      height: 100vh;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      background: hsla(134, 36%, 53%, 1);
+      background: linear-gradient(90deg, hsla(134, 36%, 53%, 1) 0%, hsla(106, 41%, 60%, 1) 100%);
+      background: -moz-linear-gradient(90deg, hsla(134, 36%, 53%, 1) 0%, hsla(106, 41%, 60%, 1) 100%);
+      background: -webkit-linear-gradient(90deg, hsla(134, 36%, 53%, 1) 0%, hsla(106, 41%, 60%, 1) 100%);
+      filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#5cb270", endColorstr="#82c26e", GradientType=1);
+      ;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 40px 0px 30px 0px;
+      font-size: 3rem;
+      color: white;
+    }
+
+    section {
+      display: flex;
+      width: 80%;
+      height: 80vh;
+      margin-inline: auto;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+    }
+
+    button {
+      padding: 20px;
+      font-size: 20px;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 400;
+      border-radius: 15px;
+      border: none;
+    }
+
+    button:active {
+      background-color: lightgray;
+    }
+
+    textarea {
+      border-radius: 10px;
+      font-size: 1.5rem;
+      padding: 10px;
+      background-color: whitesmoke;
+      border: none;
+
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    Practice set - 10 (String Methods)
+  </h1>
+
+  <section>
+    <textarea name="area-section" id="user-input" cols="65" rows="18"></textarea>
+    <button id="convert">Convert</button>
+  </section>
+
+</body>
+<script>
+  "use strict";
+  /*
+
+  Write a program that recevies a list of variable names written in underscore_case and covert them to camelCase.
+
+  The input will come form a text area inserted into the DOM (see code below ), and conversion will happen when the button is pressed. 
+
+  THIS TEST DATA (PASTED TO TEXTAREA)
+  underscore_case
+    first_name
+  Some_Varibale
+    calculate_Age
+  delayed_departure
+
+  SHOULD PRODUCE THIS OUTPUT (5 Separate Console.log outputs)
+  
+  userscoreCase       ✅
+  firstName           ✅✅
+  someVariable        ✅✅✅
+  calculateAge        ✅✅✅✅
+  delayedDeparture    ✅✅✅✅✅
+
+  HINT 1: Remeber which character defines a new line in the textarea 😙
+  
+  HINT 2: The solution only needs to work for a variable made out of 2 words, like a_b
+
+  HINT 3: Start without worrying  about the ✅. Tackle that only after you have the variable name coversion working 
+
+  
+  */
+
+  const userInput = document.getElementById("user-input")
+  const btn = document.getElementById("convert")
+
+  btn.addEventListener("click", () => {
+    const row = userInput.value.split("\n")
+    const a = []
+    const b = []
+
+    for (let i of row) {
+      a.push(i.trim(" ").toLowerCase().split("_"))
+    }
+
+    for (let j of a) {
+      let b = j[0]
+
+      for (let i = 1; i < j.length; i++) {
+        b = b + j[i][0].toUpperCase() + j[i].slice(1)
+        console.log(b);
+
+      }
+    }
+
+
+
+  })
+
+</script>
+
+</html>
