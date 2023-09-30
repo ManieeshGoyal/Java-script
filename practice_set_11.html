@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500&family=Lato:wght@300;400&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            height: 100vh;
+            font-family: 'Bricolage Grotesque', sans-serif;
+            background: hsla(134, 36%, 53%, 1);
+            background: linear-gradient(90deg, hsla(134, 36%, 53%, 1) 0%, hsla(106, 41%, 60%, 1) 100%);
+            background: -moz-linear-gradient(90deg, hsla(134, 36%, 53%, 1) 0%, hsla(106, 41%, 60%, 1) 100%);
+            background: -webkit-linear-gradient(90deg, hsla(134, 36%, 53%, 1) 0%, hsla(106, 41%, 60%, 1) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#5cb270", endColorstr="#82c26e", GradientType=1);
+            ;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 40px 0px 0px 0px;
+            font-size: 3rem;
+            color: white;
+        }
+
+        section {
+            display: flex;
+            width: 80%;
+            height: 80vh;
+            margin-inline: auto;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 20px;
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 400;
+            border-radius: 15px;
+            border: none;
+        }
+
+        button:active {
+            background-color: lightgray;
+        }
+
+        textarea {
+            border-radius: 10px;
+            font-size: 1.5rem;
+            padding: 10px;
+            background-color: whitesmoke;
+            border: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Practice set - 11 (let's build a simple Poll app !)
+    </h1>
+
+    <section>
+        <button id="poll">POLL REQ </button>
+        <textarea disabled name="area-section" id="output-box" cols="50" rows="16"></textarea>
+    </section>
+
+</body>
+<script>
+    /*
+    let's build a simple poll app!
+    
+    A poll has a question, an array of options from which people can choose, and array with the number of replies for each option. This data is stored in the starter object below.
+    
+    Here are your tasks: 
+    
+    1. Create a method called 'resgisterNewAnswer' on the 'poll' object. The method does 2 things:
+        1.1. display a prompt window for the user to input the number of the 
+        selected option. The prompt should look like this:
+            what is your favourite programming language?
+            0: JavaScript
+            1: Python
+            2: Rust 
+            3: C++
+            (Write option number)
+        
+        1.2 Based on the Input number, update the answers array. For example , if the option is 3, increase the value AT POSITION 3 of the array by 1. Make sure to check if the input is a number and if the number make sense (e.g answer 52 wouldn't make sense, right?)
+
+    2. Call this method whenever the user clicks the "Anser poll" button.
+
+    3. Create a method 'displayResults' which displays the poll results. The method takes a string as an input (called 'type'), which can be either 'sting' or 'array'. if type is "array", simply display the results array as it is, using console.log(). This should be the default option. If type is 'string', display a string like "poll results are 13, 2, 4, 1"
+    
+    4. Run the 'displayResults' method at the end of each "registerNewAnswer" method call.
+
+    Bonus: use the "displayResults" method to display the 2 array in the test data. Use both the "arry" and the 'string' option. Do NOT put the array in the poll object! So what shoud the this keyword look like in the situation?
+
+    BONUS TEST DATA 1: [5,2,3]
+    BONUS TEST DATA 2: [1,5,3,9,6,1]
+
+    GOOD LUCK 🫡
+
+    
+    */
+
+    const output = document.getElementById("output-box")
+    const pollBtn = document.getElementById("poll")
+
+
+    const poll = {
+        question: "What is your favourite prograaming language ?",
+        options: ["0: Java Script", "1:Python", "2:Rust", "3: C++"],
+        // This generates [0,0,0,0]
+        answers: new Array(0).fill(0)
+
+    }
+
+    poll.registerNewAnswer = () => {
+        while (true) {
+            const userInput = Number(prompt(`What is your favourite programming lanuage
+        0: JavaScript
+        1: Python
+        2: Rust 
+        3: C++
+        (Write option number)`))
+
+            if (userInput > 3 || userInput < 0) alert("Write a Valid Number")
+            else {
+                console.log(userInput)
+                break
+            }
+        }
+
+    }
+
+    pollBtn.addEventListener("click", poll.registerNewAnswer)
+
+</script>
+
+</html>

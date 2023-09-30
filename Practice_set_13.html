@@ -1,0 +1,33 @@
+<script>
+    "use strict";
+    /*
+    Julia and kate are doing a study on dogs. So each of them asked 5 dog owners about  their dog's age, and stored the date into an  array (one array for each). For now, they are just interested in knowing wheather a dog is an adult or a puppy. A dog is an adult if it is a least  3 years old, and it's puppy if it's less than 3 years old.
+    
+    Create a function 'checkDogs', which accepts 2 arrays of dog's ages ('dogsjulia' and "dogsKate"), and does the following things:
+    
+    1. Julia found out that the owners of the FIRST and the LAST TWO dogs actually have cats, not dogs! So create a shallow copy of Julia's array, and remove the cat ages from that copied array (becuase it's a bad practice to mutate function parameters)
+    
+    2.Create an array with both julia's (corrected) and kate's data
+    
+    3.For each remaining dog, log to the console wheather it's an adult ('dog number 1 is an adult, and is 5 years old') or a puppy ('dog number 2 is still a puppy 🐶')
+
+    4. Run the function for both test data sets
+
+    TEST DATA 1: Julia's data [3,5,2,12,7], kate's data [4,1,15,8,3]
+
+    TEST DATA 2: Julia's data [9,16,6,8,3], Kate's data [10,5,6,1,4] 
+    */
+
+    const checkDogs = (dogsJulia, dogsKate) => {
+        const correctedDogsJulia = dogsJulia.slice(2, 4)
+        const allDogs = ([...correctedDogsJulia, ...dogsKate])
+
+        allDogs.forEach((value, key) =>
+            console.log(` Dog number ${key + 1} ${(value >= 3)
+                ? `is an adult, and is ${value} years old`
+                : ` is still a puppy 🐶`}`)
+        )
+    }
+
+    checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3])
+</script>
